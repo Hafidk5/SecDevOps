@@ -3,7 +3,8 @@ name: Secure Pipeline Checks
 on:
   pull_request:
     branches: [main]
-
+  schedule:
+    - cron: "0 0 * * 1" # Voer SAST-scan uit elke maandag om 00:00 UTC
 jobs:
   security-checks:
     runs-on: ubuntu-latest
