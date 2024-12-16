@@ -40,5 +40,5 @@ jobs:
       # Test stap
       - name: Test with pytest
         run: |
-          if [ -f requirements.txt ]; then pip install pytest; fi
+          pip install pytest
           pytest
