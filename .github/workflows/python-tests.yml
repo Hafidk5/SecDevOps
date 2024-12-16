@@ -12,7 +12,8 @@ jobs:
       # Stap 1: Checkout code
       - name: Checkout repository
         uses: actions/checkout@v3
-
+        with:
+          fetch-depth: 0
       # Stap 2: CodeQL SAST scan
       - name: Run CodeQL Analysis
         uses: github/codeql-action/init@v3
@@ -34,7 +35,7 @@ jobs:
       - name: Gitleaks Scan
         uses: gitleaks/gitleaks-action@v2
         with:
-          args: "detect --source . --no-git  --exit-code=1 --verbose"
+          args: "detect --source . --exit-code=1 --verbose"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
