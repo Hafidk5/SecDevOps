@@ -31,7 +31,7 @@ jobs:
           failOnCVSS: "7"
 
       - name: Gitleaks scan
-        uses: gitleaks/gitleaks-action@v3
+        uses: gitleaks/gitleaks-action@v2
         with:
           args: "--redact"
 
