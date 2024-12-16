@@ -24,13 +24,14 @@ jobs:
 
       # Dependency Check stap
       - name: Dependency Check
-        uses: dependency-check/Dependency-Check_Action@v2.1.0
+        uses: dependency-check/Dependency-Check_Action@main
         with:
           project: "MyProject"
           path: "."
           format: "ALL"
           failOnCVSS: "7"
 
+      # Gitleaks scan
       - name: Gitleaks scan
         uses: gitleaks/gitleaks-action@v2
         with:
