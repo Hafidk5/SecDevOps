@@ -30,9 +30,8 @@ jobs:
           format: "ALL"
           failOnCVSS: "7"
 
-      # Gitleaks stap voor secret scanning
       - name: Gitleaks scan
-        uses: zricethezav/gitleaks-action@v3.1.0
+        uses: gitleaks/gitleaks-action@v3
         with:
           args: "--redact"
 
