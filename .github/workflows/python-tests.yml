@@ -30,7 +30,7 @@ jobs:
           scan: "requirements.txt"
           format: "ALL"
           failOnCVSS: "7"
-          args: "--update"
+          args: "--update --log dependency-check.log"
 
 
       # Stap 4: Secret Scanning (Gitleaks)
