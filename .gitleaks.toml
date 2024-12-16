@@ -1,0 +1,4 @@
+[[rules]]
+description = "Hardcoded password detection"
+regex = '''(?i)password\s*=\s*['"][^'"]+['"]'''
+tags = ["key", "password"]
